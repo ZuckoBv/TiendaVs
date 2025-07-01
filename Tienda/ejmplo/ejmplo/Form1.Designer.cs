@@ -1,4 +1,4 @@
-﻿namespace ejmplo
+﻿namespace Tienda
 {
     partial class frmMain
     {
@@ -30,12 +30,16 @@
         {
             comboBox1 = new ComboBox();
             comboBox2 = new ComboBox();
-            dataGridView1 = new DataGridView();
+            dgvProductos = new DataGridView();
+            Nombre = new DataGridViewTextBoxColumn();
+            Descripcion = new DataGridViewTextBoxColumn();
+            Categoria = new DataGridViewTextBoxColumn();
+            Precio = new DataGridViewTextBoxColumn();
             btnAgregarProducto = new Button();
             btnModificar = new Button();
             btnEliminar = new Button();
             fileSystemWatcher1 = new FileSystemWatcher();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
             SuspendLayout();
             // 
@@ -50,23 +54,48 @@
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(318, 21);
+            comboBox2.Location = new Point(465, 21);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(121, 23);
             comboBox2.TabIndex = 2;
             // 
-            // dataGridView1
+            // dgvProductos
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 21);
-            dataGridView1.MultiSelect = false;
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(289, 150);
-            dataGridView1.TabIndex = 3;
+            dgvProductos.AllowUserToAddRows = false;
+            dgvProductos.AllowUserToDeleteRows = false;
+            dgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvProductos.Columns.AddRange(new DataGridViewColumn[] { Nombre, Descripcion, Categoria, Precio });
+            dgvProductos.Location = new Point(12, 21);
+            dgvProductos.MultiSelect = false;
+            dgvProductos.Name = "dgvProductos";
+            dgvProductos.ReadOnly = true;
+            dgvProductos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvProductos.Size = new Size(437, 150);
+            dgvProductos.TabIndex = 3;
+            // 
+            // Nombre
+            // 
+            Nombre.HeaderText = "Nombre";
+            Nombre.Name = "Nombre";
+            Nombre.ReadOnly = true;
+            // 
+            // Descripcion
+            // 
+            Descripcion.HeaderText = "Descripcion";
+            Descripcion.Name = "Descripcion";
+            Descripcion.ReadOnly = true;
+            // 
+            // Categoria
+            // 
+            Categoria.HeaderText = "Categoria";
+            Categoria.Name = "Categoria";
+            Categoria.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            Precio.HeaderText = "Precio";
+            Precio.Name = "Precio";
+            Precio.ReadOnly = true;
             // 
             // btnAgregarProducto
             // 
@@ -80,7 +109,7 @@
             // 
             // btnModificar
             // 
-            btnModificar.Location = new Point(147, 177);
+            btnModificar.Location = new Point(296, 177);
             btnModificar.Name = "btnModificar";
             btnModificar.Size = new Size(75, 23);
             btnModificar.TabIndex = 5;
@@ -89,12 +118,13 @@
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(228, 177);
+            btnEliminar.Location = new Point(377, 177);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(73, 23);
             btnEliminar.TabIndex = 6;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // fileSystemWatcher1
             // 
@@ -110,12 +140,13 @@
             Controls.Add(btnEliminar);
             Controls.Add(btnModificar);
             Controls.Add(btnAgregarProducto);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvProductos);
             Controls.Add(comboBox2);
             Controls.Add(comboBox1);
             Name = "frmMain";
             Text = "Tienda";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Activated += frmMain_Activated;
+            ((System.ComponentModel.ISupportInitialize)dgvProductos).EndInit();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
             ResumeLayout(false);
         }
@@ -124,10 +155,14 @@
 
         private ComboBox comboBox1;
         private ComboBox comboBox2;
-        private DataGridView dataGridView1;
+        private DataGridView dgvProductos;
         private Button btnAgregarProducto;
         private Button btnModificar;
         private Button btnEliminar;
         private FileSystemWatcher fileSystemWatcher1;
+        private DataGridViewTextBoxColumn Nombre;
+        private DataGridViewTextBoxColumn Descripcion;
+        private DataGridViewTextBoxColumn Categoria;
+        private DataGridViewTextBoxColumn Precio;
     }
 }

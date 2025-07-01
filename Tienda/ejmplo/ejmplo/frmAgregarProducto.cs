@@ -7,9 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Tienda;
 
-namespace ejmplo
+namespace Tienda
 {
     public partial class frmAgregarProducto : Form
     {
@@ -66,6 +65,11 @@ namespace ejmplo
                 }
                 // Crea un espacio de memoria en productoNuevo y como parametros utiliza los txt
                 productoNuevo = new Producto(txtNombre.Text, txtDescripcion.Text,float.Parse(txtPrecio.Text), catProducto);
+                // Manda la variable personaNueva al formulario padre frmMain
+                formularioPadre.listaProducto.Add(productoNuevo);
+               
+                formularioPadre.Show();
+                this.Hide();
         }
     }
 }

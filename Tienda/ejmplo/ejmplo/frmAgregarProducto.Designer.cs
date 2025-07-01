@@ -1,4 +1,4 @@
-﻿namespace ejmplo
+﻿namespace Tienda
 {
     partial class frmAgregarProducto
     {

@@ -16,7 +16,7 @@ namespace Tienda
         Accesorios,
         Muebles
     }
-    internal class Producto
+    public class Producto
     {
         protected string nombre;
         protected string descripcion;

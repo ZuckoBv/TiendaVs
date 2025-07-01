@@ -1,4 +1,4 @@
-namespace ejmplo
+namespace Tienda
 {
     internal static class Program
     {
