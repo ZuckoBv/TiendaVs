@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Data.Sqlite;
 
 namespace Tienda
 {
@@ -41,35 +42,46 @@ namespace Tienda
         {
             Producto productoNuevo;
             Categoria catProducto;
-                switch (cmbCategoria.Text)
-                {
-                    case "Electronico":
-                        catProducto = Categoria.Electronico;
-                        break;
-                    case "Ropa":
-                        catProducto = Categoria.Ropa;
-                        break;
-                    case "Libreria":
-                        catProducto = Categoria.Libreria;
-                        break;
-                    case "Accesorios":
-                        catProducto = Categoria.Accesorios;
-                        break;
-                    case "Muebles":
-                        catProducto = Categoria.Muebles;
-                        break;
-                    default:
-                        catProducto = Categoria.Ropa;
-                        break;
 
-                }
-                // Crea un espacio de memoria en productoNuevo y como parametros utiliza los txt
-                productoNuevo = new Producto(txtNombre.Text, txtDescripcion.Text,float.Parse(txtPrecio.Text), catProducto);
-                // Manda la variable personaNueva al formulario padre frmMain
-                formularioPadre.listaProducto.Add(productoNuevo);
-               
-                formularioPadre.Show();
-                this.Hide();
+            switch (cmbCategoria.Text)
+            {
+                case "Electronico":
+                    catProducto = Categoria.Electronico;
+                    break;
+                case "Ropa":
+                    catProducto = Categoria.Ropa;
+                    break;
+                case "Libreria":
+                    catProducto = Categoria.Libreria;
+                    break;
+                case "Accesorios":
+                    catProducto = Categoria.Accesorios;
+                    break;
+                case "Muebles":
+                    catProducto = Categoria.Muebles;
+                    break;
+                default:
+                    catProducto = Categoria.Ropa;
+                    break;
+            }
+
+            // Crear producto
+            productoNuevo = new Producto(
+                id: 1,
+                nombr: txtNombre.Text,
+                descr: txtDescripcion.Text,
+                prec: float.Parse(txtPrecio.Text),
+                cat: catProducto
+            );
+
+            // Guardar en la base de datos
+            Conexion con = new Conexion(formularioPadre);
+            con.InsertarProducto(productoNuevo.IdProducto, productoNuevo);
+            // Agregar a la lista y cerrar
+            con.lista();
+            formularioPadre.Show();
+            this.Hide();
         }
+
     }
 }
