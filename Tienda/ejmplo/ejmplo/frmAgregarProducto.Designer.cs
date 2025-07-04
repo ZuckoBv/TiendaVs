@@ -129,7 +129,7 @@
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(420, 340);
+            btnAgregar.Location = new Point(383, 340);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(76, 43);
             btnAgregar.TabIndex = 1;
@@ -149,12 +149,13 @@
             // 
             // btnModificar
             // 
-            btnModificar.Location = new Point(420, 238);
+            btnModificar.Location = new Point(465, 340);
             btnModificar.Name = "btnModificar";
             btnModificar.Size = new Size(76, 43);
             btnModificar.TabIndex = 3;
             btnModificar.Text = "Modificar Producto";
             btnModificar.UseVisualStyleBackColor = true;
+            btnModificar.Visible = false;
             btnModificar.Click += btnModificar_Click;
             // 
             // frmAgregarProducto

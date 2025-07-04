@@ -53,7 +53,7 @@ namespace Tienda
             private set
             {
 
-            }
+			}
         }
         public Producto( string nombr, string descr, float prec, Categoria cat)
         {
@@ -72,8 +72,11 @@ namespace Tienda
             precio = prec;
             categoria = cat;
         }
-
-        public static List<Producto> ObtenerTodosLosProductos()
+		public void SetTipo(Categoria nuevoTipo)
+		{
+			categoria = nuevoTipo;
+		}
+		public static List<Producto> ObtenerTodosLosProductos()
         {
             List<Producto> lista = new List<Producto>();
             SqliteConnection conexion = Conexion.Instancia.ObtenerConexion();
@@ -170,20 +173,77 @@ namespace Tienda
             comando.Parameters.AddWithValue("@nombre", nombre);
             comando.Parameters.AddWithValue("@descripcion", descripcion);
             comando.Parameters.AddWithValue("@precio", precio);
-            comando.Parameters.AddWithValue("@categoria", categoria);
+            comando.Parameters.AddWithValue("@categoria", categoria.ToString());
             comando.ExecuteNonQuery();
             conexion.Close();
-        }
 
+        }
         public static void EliminarProducto(int id)
         {
             SqliteConnection conexion = Conexion.Instancia.ObtenerConexion();
             conexion.Open();
             string consulta = "DELETE FROM Productos WHERE idProducto = @id";
-            SqliteCommand comando = new SqliteCommand(consulta, conexion);
-            comando.Parameters.AddWithValue("@id", id);
+			SqliteCommand comando = new SqliteCommand(consulta, conexion);
+			comando.Parameters.AddWithValue("@id", id);
             comando.ExecuteNonQuery();
             conexion.Close();
         }
-    }
+		public static void ModificarProducto(Producto pro)
+		{
+			SqliteConnection conexion = Conexion.Instancia.ObtenerConexion();
+			conexion.Open();
+			string consulta = "UPDATE Productos SET nombre = @nombre, descripcion = @descripcion, precio = @precio WHERE idProducto = @id";
+			SqliteCommand comando = new SqliteCommand(consulta, conexion);
+			comando.Parameters.AddWithValue("@id", pro.idProducto);
+			comando.Parameters.AddWithValue("@nombre", pro.nombre);
+			comando.Parameters.AddWithValue("@descripcion", pro.descripcion);
+			comando.Parameters.AddWithValue("@precio", pro.precio);
+			comando.ExecuteNonQuery();
+			conexion.Close();
+		}
+		public static List<Producto> MostrarCategoria(string categoria)
+		{
+			List<Producto> lista = new List<Producto>();
+			SqliteConnection conexion = Conexion.Instancia.ObtenerConexion();
+			conexion.Open();
+			string consulta = "SELECT * FROM Productos WHERE categoria = @categoria";
+			SqliteCommand comando = new SqliteCommand(consulta, conexion);
+			comando.Parameters.AddWithValue("@categoria", categoria);
+			SqliteDataReader lector = comando.ExecuteReader();
+			while (lector.Read())
+			{
+				Categoria cat;
+				switch (lector["categoria"].ToString())
+				{
+					case "Electronico":
+						cat = Categoria.Electronico;
+						break;
+					case "Ropa":
+						cat = Categoria.Ropa;
+						break;
+					case "Libreria":
+						cat = Categoria.Libreria;
+						break;
+					case "Accesorios":
+						cat = Categoria.Accesorios;
+						break;
+					case "Muebles":
+						cat = Categoria.Muebles;
+						break;
+					default:
+						cat = Categoria.Ropa;
+						break;
+				}
+				Producto pro = new Producto(int.Parse(lector["idProducto"].ToString()),
+											lector["nombre"].ToString(),
+											lector["descripcion"].ToString(),
+											float.Parse(lector["precio"].ToString()),
+											cat);
+
+				lista.Add(pro);
+			}
+			conexion.Close();
+			return lista;
+		}
+	}
 }

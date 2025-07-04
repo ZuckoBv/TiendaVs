@@ -25,8 +25,13 @@ namespace Tienda
             listaProductos = Producto.ObtenerTodosLosProductos();
             refrescarDataGrid();
         }
-
-        public void refrescarDataGrid() 
+        public void ActualizarListaPorCategoria()
+        {
+            string categoria = cmbCategoria.Text;
+            listaProductos = Producto.MostrarCategoria(categoria);
+            refrescarDataGrid();
+        }
+        public void refrescarDataGrid()
         {
             dgvProductos.Rows.Clear();
             if (listaProductos == null)
@@ -39,16 +44,16 @@ namespace Tienda
                 return;
             }
             // Limpia si había algo previamente en el data grid view
-           
+
             foreach (Producto p in listaProductos)
             {
-                dgvProductos.Rows.Add(p.IdProducto,p.Nombre, p.Descripcion, p.Tipo, p.Precio);
+                dgvProductos.Rows.Add(p.IdProducto, p.Nombre, p.Descripcion, p.Tipo, p.Precio);
             }
 
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            frmAgregarProd.Show();
+			frmAgregarProd.Show();
             this.Hide();
         }
 
@@ -69,8 +74,14 @@ namespace Tienda
         }
         private void btnModificar_Click(object sender, EventArgs e)
         {
-
+            int idProducto = (int)dgvProductos.SelectedRows[0].Cells[0].Value;
+            Producto objetoAModificar = Producto.ObtenerUno(idProducto);
+            frmAgregarProd.MostrarModificar(objetoAModificar);
         }
-        
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            ActualizarListaPorCategoria();
+        }
     }
 }

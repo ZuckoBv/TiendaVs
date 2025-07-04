@@ -28,7 +28,11 @@ namespace Tienda
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            formularioPadre.Show();
+			lblNombre.Text = " ";
+			lblDescripcion.Text = " ";
+			lblPrecio.Text = " ";
+			ResetearForm();
+			formularioPadre.Show();
             this.Hide();
         }
         private void frmAgregarProducto_FormClosing(object sender, FormClosingEventArgs e)
@@ -43,7 +47,7 @@ namespace Tienda
         {
             Producto productoNuevo;
             Categoria catProducto;
-
+                
             switch (cmbCategoria.Text)
             {
                 case "Electronico":
@@ -73,26 +77,47 @@ namespace Tienda
                 prec: float.Parse(txtPrecio.Text),
                 cat: catProducto
             );
-
             productoNuevo.AgregarABaseDeDatos();
             formularioPadre.ActualizarLista();
+            ResetearForm();
             this.Hide();
             formularioPadre.Show();
         }
-
-        public void MostarModificar(Producto pro)
+        private void ResetearForm()
+        {
+            btnModificar.Visible = false;
+			btnAgregar.Visible = true;
+			cmbCategoria.Visible = true;
+			lblCategoria.Visible = true;
+			txtNombre.Clear();
+			txtDescripcion.Clear();
+			txtPrecio.Clear();
+		}
+	public void MostrarModificar(Producto pro)
         {
             productoAModificar = pro;
             txtNombre.Text = productoAModificar.Nombre;
-
-            this.Show();
+			txtDescripcion.Text = productoAModificar.Descripcion;
+			txtPrecio.Text = productoAModificar.Precio.ToString();
+			cmbCategoria.Text = productoAModificar.Tipo;
+			txtNombre.Text = productoAModificar.Nombre;
+			this.Show();
+			cmbCategoria.Visible = false;
+			lblCategoria.Visible = false;
+			btnModificar.Visible = true;
+            btnAgregar.Visible = false;
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            productoAModificar.Nombre = txtNombre.Text;
-
-            
-        }
+			productoAModificar.Nombre = txtNombre.Text;
+			productoAModificar.Descripcion = txtDescripcion.Text;
+			productoAModificar.Precio = float.Parse(txtPrecio.Text);
+            Producto.ModificarProducto(productoAModificar);
+            ResetearForm();
+			formularioPadre.ActualizarLista();
+			this.Hide();
+			formularioPadre.Show();
+		}
     }
 }

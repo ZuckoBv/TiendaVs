@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
+            cmbCategoria = new ComboBox();
             dgvProductos = new DataGridView();
             IdProducto = new DataGridViewTextBoxColumn();
             Nombre = new DataGridViewTextBoxColumn();
@@ -40,26 +39,19 @@
             btnModificar = new Button();
             btnEliminar = new Button();
             fileSystemWatcher1 = new FileSystemWatcher();
-            lblPrueba = new Label();
+            btnFiltrar = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
             SuspendLayout();
             // 
-            // comboBox1
+            // cmbCategoria
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(650, 21);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 1;
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(650, 59);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(121, 23);
-            comboBox2.TabIndex = 2;
+            cmbCategoria.FormattingEnabled = true;
+            cmbCategoria.Items.AddRange(new object[] { "Electronico", "Ropa", "Libreria", "Accesorios", "Muebles" });
+            cmbCategoria.Location = new Point(575, 21);
+            cmbCategoria.Name = "cmbCategoria";
+            cmbCategoria.Size = new Size(121, 23);
+            cmbCategoria.TabIndex = 1;
             // 
             // dgvProductos
             // 
@@ -140,14 +132,15 @@
             fileSystemWatcher1.EnableRaisingEvents = true;
             fileSystemWatcher1.SynchronizingObject = this;
             // 
-            // lblPrueba
+            // btnFiltrar
             // 
-            lblPrueba.AutoSize = true;
-            lblPrueba.Location = new Point(669, 172);
-            lblPrueba.Name = "lblPrueba";
-            lblPrueba.Size = new Size(27, 15);
-            lblPrueba.TabIndex = 7;
-            lblPrueba.Text = "text";
+            btnFiltrar.Location = new Point(603, 50);
+            btnFiltrar.Name = "btnFiltrar";
+            btnFiltrar.Size = new Size(71, 24);
+            btnFiltrar.TabIndex = 7;
+            btnFiltrar.Text = "Filtrar";
+            btnFiltrar.UseVisualStyleBackColor = true;
+            btnFiltrar.Click += btnFiltrar_Click;
             // 
             // frmMain
             // 
@@ -155,26 +148,23 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(144, 144, 255);
             ClientSize = new Size(800, 450);
-            Controls.Add(lblPrueba);
+            Controls.Add(btnFiltrar);
             Controls.Add(btnEliminar);
             Controls.Add(btnModificar);
             Controls.Add(btnAgregarProducto);
             Controls.Add(dgvProductos);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
+            Controls.Add(cmbCategoria);
             Name = "frmMain";
             Text = "Tienda";
             Activated += frmMain_Activated;
             ((System.ComponentModel.ISupportInitialize)dgvProductos).EndInit();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private ComboBox cmbCategoria;
         private DataGridView dgvProductos;
         private Button btnAgregarProducto;
         private Button btnModificar;
@@ -185,6 +175,6 @@
         private DataGridViewTextBoxColumn Descripcion;
         private DataGridViewTextBoxColumn Categoria;
         private DataGridViewTextBoxColumn Precio;
-        private Label lblPrueba;
+        private Button btnFiltrar;
     }
 }

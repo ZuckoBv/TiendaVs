@@ -1,30 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Alumno\\Pictures\\TiendaVs\\Tienda\\ejmplo\\",
+  "WorkspaceRootPath": "C:\\Users\\Alumnito\\Documents\\TiendaVs\\Tienda\\ejmplo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B8B4CCA6-8949-4AF7-8D60-7400B96A8614}|ejmplo\\Tienda.csproj|c:\\users\\alumno\\pictures\\tiendavs\\tienda\\ejmplo\\ejmplo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8B4CCA6-8949-4AF7-8D60-7400B96A8614}|ejmplo\\Tienda.csproj|solutionrelative:ejmplo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8B4CCA6-8949-4AF7-8D60-7400B96A8614}|ejmplo\\Tienda.csproj|c:\\users\\alumno\\pictures\\tiendavs\\tienda\\ejmplo\\ejmplo\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B8B4CCA6-8949-4AF7-8D60-7400B96A8614}|ejmplo\\Tienda.csproj|c:\\users\\alumnito\\documents\\tiendavs\\tienda\\ejmplo\\ejmplo\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8B4CCA6-8949-4AF7-8D60-7400B96A8614}|ejmplo\\Tienda.csproj|solutionrelative:ejmplo\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8B4CCA6-8949-4AF7-8D60-7400B96A8614}|ejmplo\\Tienda.csproj|C:\\Users\\Alumno\\Pictures\\TiendaVs\\Tienda\\ejmplo\\ejmplo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B8B4CCA6-8949-4AF7-8D60-7400B96A8614}|ejmplo\\Tienda.csproj|solutionrelative:ejmplo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8B4CCA6-8949-4AF7-8D60-7400B96A8614}|ejmplo\\Tienda.csproj|c:\\users\\alumno\\pictures\\tiendavs\\tienda\\ejmplo\\ejmplo\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8B4CCA6-8949-4AF7-8D60-7400B96A8614}|ejmplo\\Tienda.csproj|solutionrelative:ejmplo\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8B4CCA6-8949-4AF7-8D60-7400B96A8614}|ejmplo\\Tienda.csproj|c:\\users\\alumno\\pictures\\tiendavs\\tienda\\ejmplo\\ejmplo\\frmagregarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B8B4CCA6-8949-4AF7-8D60-7400B96A8614}|ejmplo\\Tienda.csproj|c:\\users\\alumnito\\documents\\tiendavs\\tienda\\ejmplo\\ejmplo\\frmagregarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8B4CCA6-8949-4AF7-8D60-7400B96A8614}|ejmplo\\Tienda.csproj|solutionrelative:ejmplo\\frmagregarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8B4CCA6-8949-4AF7-8D60-7400B96A8614}|ejmplo\\Tienda.csproj|C:\\Users\\Alumno\\Pictures\\TiendaVs\\Tienda\\ejmplo\\ejmplo\\frmagregarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{B8B4CCA6-8949-4AF7-8D60-7400B96A8614}|ejmplo\\Tienda.csproj|C:\\Users\\Alumnito\\Documents\\TiendaVs\\Tienda\\ejmplo\\ejmplo\\frmagregarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{B8B4CCA6-8949-4AF7-8D60-7400B96A8614}|ejmplo\\Tienda.csproj|solutionrelative:ejmplo\\frmagregarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8B4CCA6-8949-4AF7-8D60-7400B96A8614}|ejmplo\\Tienda.csproj|C:\\Users\\Alumnito\\Documents\\TiendaVs\\Tienda\\ejmplo\\ejmplo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B8B4CCA6-8949-4AF7-8D60-7400B96A8614}|ejmplo\\Tienda.csproj|solutionrelative:ejmplo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8B4CCA6-8949-4AF7-8D60-7400B96A8614}|ejmplo\\Tienda.csproj|c:\\users\\alumnito\\documents\\tiendavs\\tienda\\ejmplo\\ejmplo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8B4CCA6-8949-4AF7-8D60-7400B96A8614}|ejmplo\\Tienda.csproj|solutionrelative:ejmplo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8B4CCA6-8949-4AF7-8D60-7400B96A8614}|ejmplo\\Tienda.csproj|c:\\users\\alumnito\\documents\\tiendavs\\tienda\\ejmplo\\ejmplo\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8B4CCA6-8949-4AF7-8D60-7400B96A8614}|ejmplo\\Tienda.csproj|solutionrelative:ejmplo\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
@@ -37,17 +37,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Producto.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Pictures\\TiendaVs\\Tienda\\ejmplo\\ejmplo\\Producto.cs",
+              "DocumentMoniker": "C:\\Users\\Alumnito\\Documents\\TiendaVs\\Tienda\\ejmplo\\ejmplo\\Producto.cs",
               "RelativeDocumentMoniker": "ejmplo\\Producto.cs",
-              "ToolTip": "C:\\Users\\Alumno\\Pictures\\TiendaVs\\Tienda\\ejmplo\\ejmplo\\Producto.cs",
+              "ToolTip": "C:\\Users\\Alumnito\\Documents\\TiendaVs\\Tienda\\ejmplo\\ejmplo\\Producto.cs",
               "RelativeToolTip": "ejmplo\\Producto.cs",
-              "ViewState": "AgIAAJoAAAAAAAAAAAAiwLkAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAKMAAAAAAAAAAAAAAK8AAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-03T04:24:30.647Z",
               "IsPinned": true,
@@ -55,13 +55,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "conexion.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Pictures\\TiendaVs\\Tienda\\ejmplo\\ejmplo\\conexion.cs",
+              "DocumentMoniker": "C:\\Users\\Alumnito\\Documents\\TiendaVs\\Tienda\\ejmplo\\ejmplo\\conexion.cs",
               "RelativeDocumentMoniker": "ejmplo\\conexion.cs",
-              "ToolTip": "C:\\Users\\Alumno\\Pictures\\TiendaVs\\Tienda\\ejmplo\\ejmplo\\conexion.cs",
+              "ToolTip": "C:\\Users\\Alumnito\\Documents\\TiendaVs\\Tienda\\ejmplo\\ejmplo\\conexion.cs",
               "RelativeToolTip": "ejmplo\\conexion.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAABQAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-03T17:52:21.259Z",
               "IsPinned": true,
@@ -73,11 +73,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Pictures\\TiendaVs\\Tienda\\ejmplo\\ejmplo\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Alumnito\\Documents\\TiendaVs\\Tienda\\ejmplo\\ejmplo\\Form1.cs",
               "RelativeDocumentMoniker": "ejmplo\\Form1.cs",
-              "ToolTip": "C:\\Users\\Alumno\\Pictures\\TiendaVs\\Tienda\\ejmplo\\ejmplo\\Form1.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\Alumnito\\Documents\\TiendaVs\\Tienda\\ejmplo\\ejmplo\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "ejmplo\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-01T00:11:17.506Z",
@@ -85,38 +85,38 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "frmAgregarProducto.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Pictures\\TiendaVs\\Tienda\\ejmplo\\ejmplo\\frmAgregarProducto.cs",
+              "DocumentMoniker": "C:\\Users\\Alumnito\\Documents\\TiendaVs\\Tienda\\ejmplo\\ejmplo\\frmAgregarProducto.cs",
               "RelativeDocumentMoniker": "ejmplo\\frmAgregarProducto.cs",
-              "ToolTip": "C:\\Users\\Alumno\\Pictures\\TiendaVs\\Tienda\\ejmplo\\ejmplo\\frmAgregarProducto.cs [Dise\u00F1o]",
-              "RelativeToolTip": "ejmplo\\frmAgregarProducto.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\Alumnito\\Documents\\TiendaVs\\Tienda\\ejmplo\\ejmplo\\frmAgregarProducto.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "ejmplo\\frmAgregarProducto.cs [Dise\u00F1o]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-01T00:11:47.707Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "frmAgregarProducto.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Pictures\\TiendaVs\\Tienda\\ejmplo\\ejmplo\\frmAgregarProducto.cs",
+              "DocumentMoniker": "C:\\Users\\Alumnito\\Documents\\TiendaVs\\Tienda\\ejmplo\\ejmplo\\frmAgregarProducto.cs",
               "RelativeDocumentMoniker": "ejmplo\\frmAgregarProducto.cs",
-              "ToolTip": "C:\\Users\\Alumno\\Pictures\\TiendaVs\\Tienda\\ejmplo\\ejmplo\\frmAgregarProducto.cs",
-              "RelativeToolTip": "ejmplo\\frmAgregarProducto.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAcwFQAAAAlAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Alumnito\\Documents\\TiendaVs\\Tienda\\ejmplo\\ejmplo\\frmAgregarProducto.cs*",
+              "RelativeToolTip": "ejmplo\\frmAgregarProducto.cs*",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwDAAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-26T23:40:55.55Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Alumno\\Pictures\\TiendaVs\\Tienda\\ejmplo\\ejmplo\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Alumnito\\Documents\\TiendaVs\\Tienda\\ejmplo\\ejmplo\\Form1.cs",
               "RelativeDocumentMoniker": "ejmplo\\Form1.cs",
-              "ToolTip": "C:\\Users\\Alumno\\Pictures\\TiendaVs\\Tienda\\ejmplo\\ejmplo\\Form1.cs",
+              "ToolTip": "C:\\Users\\Alumnito\\Documents\\TiendaVs\\Tienda\\ejmplo\\ejmplo\\Form1.cs",
               "RelativeToolTip": "ejmplo\\Form1.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAewEAAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAEAAAAAAAAAAAAA8wE4AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-01T00:27:32.296Z",
               "EditorCaption": ""
