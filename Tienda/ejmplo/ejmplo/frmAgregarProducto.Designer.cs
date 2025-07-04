@@ -39,6 +39,7 @@
             lblNombre = new Label();
             btnAgregar = new Button();
             btnVolver = new Button();
+            btnModificar = new Button();
             grpDatos.SuspendLayout();
             SuspendLayout();
             // 
@@ -146,12 +147,23 @@
             btnVolver.UseVisualStyleBackColor = true;
             btnVolver.Click += btnVolver_Click;
             // 
+            // btnModificar
+            // 
+            btnModificar.Location = new Point(420, 238);
+            btnModificar.Name = "btnModificar";
+            btnModificar.Size = new Size(76, 43);
+            btnModificar.TabIndex = 3;
+            btnModificar.Text = "Modificar Producto";
+            btnModificar.UseVisualStyleBackColor = true;
+            btnModificar.Click += btnModificar_Click;
+            // 
             // frmAgregarProducto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(185, 144, 255);
             ClientSize = new Size(800, 450);
+            Controls.Add(btnModificar);
             Controls.Add(btnVolver);
             Controls.Add(btnAgregar);
             Controls.Add(grpDatos);
@@ -176,5 +188,6 @@
         private ComboBox cmbCategoria;
         private Button btnAgregar;
         private Button btnVolver;
+        private Button btnModificar;
     }
 }

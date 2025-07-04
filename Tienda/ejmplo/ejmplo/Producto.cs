@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Emit;
@@ -54,6 +55,14 @@ namespace Tienda
 
             }
         }
+        public Producto( string nombr, string descr, float prec, Categoria cat)
+        {
+            // Guarda los valores de las variables de la funcion set y los guarda en variables dentro de Alumno
+            nombre = nombr;
+            descripcion = descr;
+            precio = prec;
+            categoria = cat;
+        }
         public Producto(int id, string nombr, string descr, float prec, Categoria cat)
         {
             // Guarda los valores de las variables de la funcion set y los guarda en variables dentro de Alumno
@@ -64,5 +73,117 @@ namespace Tienda
             categoria = cat;
         }
 
+        public static List<Producto> ObtenerTodosLosProductos()
+        {
+            List<Producto> lista = new List<Producto>();
+            SqliteConnection conexion = Conexion.Instancia.ObtenerConexion();
+            conexion.Open();
+            string consulta = "SELECT * FROM Productos";
+            SqliteCommand comando = new SqliteCommand(consulta, conexion);
+            SqliteDataReader lector = comando.ExecuteReader();
+            
+            while (lector.Read())
+            {
+                Categoria cat;
+                switch (lector["categoria"].ToString())
+                {
+                    case "Electronico":
+                        cat = Categoria.Electronico;
+                        break;
+                    case "Ropa":
+                        cat = Categoria.Ropa;
+                        break;
+                    case "Libreria":
+                        cat = Categoria.Libreria;
+                        break;
+                    case "Accesorios":
+                        cat = Categoria.Accesorios;
+                        break;
+                    case "Muebles":
+                        cat = Categoria.Muebles;
+                        break;
+                    default:
+                        cat = Categoria.Ropa;
+                        break;
+                }
+                Producto pro = new Producto(int.Parse(lector["idProducto"].ToString()),
+                                            lector["nombre"].ToString(),
+                                            lector["descripcion"].ToString(),
+                                            float.Parse(lector["precio"].ToString()),
+                                            cat);
+
+                lista.Add(pro);
+            }
+            conexion.Close();
+            return lista;
+        }
+
+        public static Producto ObtenerUno(int id)
+        {
+            SqliteConnection conexion = Conexion.Instancia.ObtenerConexion();
+            conexion.Open();
+            string consulta = "SELECT * FROM Productos WHERE idProducto = @id";
+            SqliteCommand comando = new SqliteCommand(consulta, conexion);
+            comando.Parameters.AddWithValue("@id", id);
+            SqliteDataReader lector = comando.ExecuteReader();
+            lector.Read();
+            if (lector == null)
+                return null;
+
+            Categoria cat;
+            switch (lector["categoria"].ToString())
+            {
+                case "Electronico":
+                    cat = Categoria.Electronico;
+                    break;
+                case "Ropa":
+                    cat = Categoria.Ropa;
+                    break;
+                case "Libreria":
+                    cat = Categoria.Libreria;
+                    break;
+                case "Accesorios":
+                    cat = Categoria.Accesorios;
+                    break;
+                case "Muebles":
+                    cat = Categoria.Muebles;
+                    break;
+                default:
+                    cat = Categoria.Ropa;
+                    break;
+            }
+            Producto pro = new Producto(int.Parse(lector["idProducto"].ToString()),
+                                        lector["nombre"].ToString(),
+                                        lector["descripcion"].ToString(),
+                                        float.Parse(lector["precio"].ToString()),
+            cat);
+            conexion.Close();
+            return pro;
+        }
+
+        public void AgregarABaseDeDatos()
+        {
+            SqliteConnection conexion = Conexion.Instancia.ObtenerConexion();
+            conexion.Open();
+            string consulta = "INSERT INTO Productos (nombre,descripcion,precio,categoria) VALUES (@nombre,@descripcion,@precio,@categoria)";
+            SqliteCommand comando = new SqliteCommand(consulta, conexion);
+            comando.Parameters.AddWithValue("@nombre", nombre);
+            comando.Parameters.AddWithValue("@descripcion", descripcion);
+            comando.Parameters.AddWithValue("@precio", precio);
+            comando.Parameters.AddWithValue("@categoria", categoria);
+            comando.ExecuteNonQuery();
+            conexion.Close();
+        }
+
+        public static void EliminarProducto(int id)
+        {
+            SqliteConnection conexion = Conexion.Instancia.ObtenerConexion();
+            conexion.Open();
+            string consulta = "DELETE FROM Productos WHERE idProducto = @id";
+            SqliteCommand comando = new SqliteCommand(consulta, conexion);
+            comando.Parameters.AddWithValue("@id", id);
+            comando.ExecuteNonQuery();
+            conexion.Close();
+        }
     }
 }

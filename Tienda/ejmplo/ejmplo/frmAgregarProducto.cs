@@ -14,6 +14,7 @@ namespace Tienda
     public partial class frmAgregarProducto : Form
     {
         frmMain formularioPadre;
+        Producto productoAModificar;
         public frmAgregarProducto(frmMain formPadre)
         {
             formularioPadre = formPadre;
@@ -67,21 +68,31 @@ namespace Tienda
 
             // Crear producto
             productoNuevo = new Producto(
-                id: 1,
                 nombr: txtNombre.Text,
                 descr: txtDescripcion.Text,
                 prec: float.Parse(txtPrecio.Text),
                 cat: catProducto
             );
 
-            // Guardar en la base de datos
-            Conexion con = new Conexion(formularioPadre);
-            con.InsertarProducto(productoNuevo.IdProducto, productoNuevo);
-            // Agregar a la lista y cerrar
-            con.lista();
-            formularioPadre.Show();
+            productoNuevo.AgregarABaseDeDatos();
+            formularioPadre.ActualizarLista();
             this.Hide();
+            formularioPadre.Show();
         }
 
+        public void MostarModificar(Producto pro)
+        {
+            productoAModificar = pro;
+            txtNombre.Text = productoAModificar.Nombre;
+
+            this.Show();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            productoAModificar.Nombre = txtNombre.Text;
+
+            
+        }
     }
 }
